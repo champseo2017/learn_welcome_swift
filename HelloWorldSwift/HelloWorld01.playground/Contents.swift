@@ -1,13 +1,13 @@
 import UIKit
 
+// simpler way to include values in strings
 
-let implicitInteger = 70
-let implicitDouble = 70.0
-let explicitDouble: Double = 70
-let explicitFloat: Float = 4.2
+let apples = 3
+let oranges = 5
 
-// Values are never implicitly converted to another type.
-let label = "The width is "
-let width = 94
-// make an instance of the desired type.
-let widthLabel = label + String(width)
+// Write the value in parentheses and write a backslash (\) before the parentheses.
+
+let appleSummary = "I have \(apples) apples."
+
+print(appleSummary)
+
