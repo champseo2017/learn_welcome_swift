@@ -1,20 +1,17 @@
 import UIKit
 
-// simpler way to include values in strings
 
-let apples = 3
-let oranges = 5
+// Create arrays and dictionaries using brackets ([]),
+// and access their elements by writing the index or key in brackets.
 
-let float1 = 2.0
-let float2 = 3.0
-let name = "Hello"
+var shoppingList = ["catfish", "water", "tulips"]
+shoppingList[1] = "bottle of water"
 
-// Write the value in parentheses and write a backslash (\) before the parentheses.
+var occupations = [
+    "Malcolm": "Captain",
+    "Keylee": "Mechanic",
+]
 
-let appleSummary = "I have \(apples) apples."
+occupations["Jayne"] = "Public Relations"
 
-let fruitSummary = "I have \(apples + oranges) pieces of fruit."
 
-let resultFloat = "sum \(float1 + float2) \(name)"
-
-print(resultFloat)
