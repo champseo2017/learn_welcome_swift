@@ -1,17 +1,7 @@
 import UIKit
 
 
-// Create arrays and dictionaries using brackets ([]),
-// and access their elements by writing the index or key in brackets.
+// To create an empty array or dictionary, use the initializer syntax.
 
-var shoppingList = ["catfish", "water", "tulips"]
-shoppingList[1] = "bottle of water"
-
-var occupations = [
-    "Malcolm": "Captain",
-    "Keylee": "Mechanic",
-]
-
-occupations["Jayne"] = "Public Relations"
-
-
+var emptyArray = [String]()// array key string empty string
+var emptyDictionary = Dictionary<String, Float>() // array key value Dictionary<String, Float>
