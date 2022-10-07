@@ -2,32 +2,32 @@ import UIKit
 
 
 // Control Flow
-// Use if and switch to make conditionals
-// Use for-in, for, while and do-while to make loops.
-// Parentheses around the condition or loop variable are optional.
-// Because around the body are required.
+// Switches support any kind of data and a wide variety
+// comparison operations-they aren't limited to integers and tests for equality.
 
-let individualScores = [75, 43, 103, 87, 12]
-var teamScore = 0
 
-for score in individualScores {
-    if score > 50 {
-        teamScore += 3
-    } else {
-        teamScore += 1
-    }
+let vegetable = "red pepper"
+
+switch vegetable {
+    
+    case "celery": // Switches operations-they aren't limited to integers
+      
+      let vegetableComment = "Add some raisins and make ants on a log."
+    
+    case "cucumber", "watercress": // Switches operations-they aren't limited to integers
+    
+      let vegetableCommment = "That would make a good tea sandwich"
+    
+   case let x where x.hasSuffix("peppes") // Switches operations-they aren't limited to integers
+    
+      let vegetableComment = "Is it a spicy \(x)?"
+    
+      // no need to explicitly break out of the switch at the end of each case’s code.
+    
+   default:
+     
+     let vegetableComment = "Everything tastes good in soup."
+    
 }
 
-// Write a question mark (?) after the type of a value to mark the value as optional
-// An optional value either contains a value or contains nil to indicate the value is missing.
 
-var optionalString: String? = "Hello"
-optionalString == nil
-
-var optionalName: String? // nil
-var greeting = "Hello!"
-
-if let name = optionalName {
-    greeting = "Hello, \(name)"
-}
-print(greeting)
