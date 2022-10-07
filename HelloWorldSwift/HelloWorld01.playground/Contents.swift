@@ -2,32 +2,37 @@ import UIKit
 
 
 // Control Flow
-// Switches support any kind of data and a wide variety
-// comparison operations-they aren't limited to integers and tests for equality.
+// for-in to iterate over items in a dictionary by providing a prir of names
+// to use for each key-value pair.
 
 
-let vegetable = "red pepper"
+let interestingNumbers = [
+    
+    "Prime": [2, 3, 5, 7, 11, 13],
+    "Fibonacci": [1, 1, 2, 3, 5, 8],
+    "Square": [1, 4, 9, 16, 25]
 
-switch vegetable {
+]
+
+
+var largest = 0
+var largestMaxNumber = 0
+
+for (kind, numbers) in interestingNumbers {
     
-    case "celery": // Switches operations-they aren't limited to integers
-      
-      let vegetableComment = "Add some raisins and make ants on a log."
-    
-    case "cucumber", "watercress": // Switches operations-they aren't limited to integers
-    
-      let vegetableCommment = "That would make a good tea sandwich"
-    
-   case let x where x.hasSuffix("peppes") // Switches operations-they aren't limited to integers
-    
-      let vegetableComment = "Is it a spicy \(x)?"
-    
-      // no need to explicitly break out of the switch at the end of each case’s code.
-    
-   default:
-     
-     let vegetableComment = "Everything tastes good in soup."
+    for number in numbers {
+        
+        let maxNumber: Int = numbers.max() ?? 0
+        
+        if number > largest {
+            largest = number
+        }
+        
+        if maxNumber > largestMaxNumber {
+            largestMaxNumber += maxNumber
+        }
+        
+    }
     
 }
-
 
