@@ -1,15 +1,14 @@
 import UIKit
 
 
-// Control Flow
+// Functions and Closures
 
-// You can keep an index in a loop-either by using ... to make a range of indexes
+// Use func to declare a functions.
+// Call a function by following its name with a list of arguments in parentheses.
+// Use -> to separate the parameter names and types from the function's return type.
 
-var firstForLoop = 0
-
-for i in 0...3 {
-    firstForLoop += i
+func greet(name: String, toDay: String) -> String {
+    return "Hello \(name), today is \(toDay)"
 }
 
-var secondForLoop = 0
-
+greet(name: "Bob", toDay: "Tuesday")
