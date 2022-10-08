@@ -3,12 +3,14 @@ import UIKit
 
 // Functions and Closures
 
-// Use a tuple to return multiple values from a function.
+// Functions can also take a variable number of arguments
+// Collection them into an array
+// Write a function that calculates the average of its arguments.
 
-func getGasPrices() -> (Double, Double, Double) {
+func sumof(numbers: Int...) -> Double {
     
-    return (3.59, 3.69, 3.79)
+    return Double(numbers.reduce(0, +)) / Double(numbers.count)
     
 }
 
-getGasPrices()
+sumof(numbers: 42, 597, 12)
