@@ -2,37 +2,23 @@ import UIKit
 
 
 // Control Flow
-// for-in to iterate over items in a dictionary by providing a prir of names
-// to use for each key-value pair.
+// Use while to repeat a block of code until a condition changes.
+// The condition of a loop can be at the end instead,
+// ensuring that the loop is run at least once.
 
+var n = 2
 
-let interestingNumbers = [
-    
-    "Prime": [2, 3, 5, 7, 11, 13],
-    "Fibonacci": [1, 1, 2, 3, 5, 8],
-    "Square": [1, 4, 9, 16, 25]
-
-]
-
-
-var largest = 0
-var largestMaxNumber = 0
-
-for (kind, numbers) in interestingNumbers {
-    
-    for number in numbers {
-        
-        let maxNumber: Int = numbers.max() ?? 0
-        
-        if number > largest {
-            largest = number
-        }
-        
-        if maxNumber > largestMaxNumber {
-            largestMaxNumber += maxNumber
-        }
-        
-    }
-    
+while n < 100 {
+    n = n * 2
 }
 
+
+var m = 2
+
+repeat { // use repeat instead do
+    
+    m = m * 2
+    
+} while m < 100
+            
+print(m)
