@@ -3,14 +3,23 @@ import UIKit
 
 // Functions and Closures
 
-// Functions can also take a variable number of arguments
-// Collection them into an array
-// Write a function that calculates the average of its arguments.
+// Functions can be nested.
+// Nested functions have access to variables that were declared in the outer function.
 
-func sumof(numbers: Int...) -> Double {
+// You can use nested functions to organize the code in a function that is long or complex.
+
+func returnFifteen() -> Int {
     
-    return Double(numbers.reduce(0, +)) / Double(numbers.count)
+    var y = 10
+    
+    func add() {
+        y += 5
+    }
+    
+    add()
+    
+    return y
+    
     
 }
-
-sumof(numbers: 42, 597, 12)
+returnFifteen()
