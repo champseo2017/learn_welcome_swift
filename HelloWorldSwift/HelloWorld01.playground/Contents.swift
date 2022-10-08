@@ -2,23 +2,14 @@ import UIKit
 
 
 // Control Flow
-// Use while to repeat a block of code until a condition changes.
-// The condition of a loop can be at the end instead,
-// ensuring that the loop is run at least once.
 
-var n = 2
+// You can keep an index in a loop-either by using ... to make a range of indexes
 
-while n < 100 {
-    n = n * 2
+var firstForLoop = 0
+
+for i in 0...3 {
+    firstForLoop += i
 }
 
+var secondForLoop = 0
 
-var m = 2
-
-repeat { // use repeat instead do
-    
-    m = m * 2
-    
-} while m < 100
-            
-print(m)
