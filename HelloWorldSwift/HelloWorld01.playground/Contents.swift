@@ -1,18 +1,13 @@
 import UIKit
 
 
-// Functions are actually a special case of closures
-// Use in to separate the arguments and return type from the body
+// You have several options for writing closures more concisely.
+// When a closure's type is already know
+// you can omit the type of its parameters its return type
+// Single statement closures implicitly return the value of their only statement.
 
-var numbers = [20, 19, 7, 12]
+let numbers = [20, 19, 7, 12]
 
-let result = numbers.map({
-    (number: Int) -> Int in
-    if number % 2 == 0 {
-       return number // is even number
-      } else {
-       return 0 // is odd number
-    }
-})
+let resultNumbers = numbers.map({ number in 3 * number })
 
-print(result)
+print(resultNumbers)
