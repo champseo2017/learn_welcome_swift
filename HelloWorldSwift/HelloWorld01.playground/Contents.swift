@@ -1,13 +1,10 @@
 import UIKit
 
 
-// You have several options for writing closures more concisely.
-// When a closure's type is already know
-// you can omit the type of its parameters its return type
-// Single statement closures implicitly return the value of their only statement.
+// You can refer to parameters by number instead of by name
 
-let numbers = [20, 19, 7, 12]
+let names = [1, 5, 3, 12, 2]
 
-let resultNumbers = numbers.map({ number in 3 * number })
+let sort = names.sorted(by: { $0 > $1 })
 
-print(resultNumbers)
+print(sort)
