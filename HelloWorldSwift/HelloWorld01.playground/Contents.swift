@@ -3,10 +3,8 @@ import UIKit
 
 // Object and class
 
-// Use class followed by the class's name to create a class
-// A property declaration in a class is written the same way as a constant or variable declaration
-// except that it is in the context of a class
-// method and function declarations are written the same way.
+// Create an instance of a class by putting parentheses after class name.
+// Use dot syntax to access the properties and methods of the instance.
 
 class Shape {
     
@@ -25,3 +23,9 @@ class Shape {
     
     
 }
+
+var shape = Shape() // Create an instance of a class
+shape.numberOfSides = 7 // Use dot syntax to access the properties and methods of the instance
+
+var shapeDescriptions = shape.simpleDescription()
+print(shapeDescriptions)
