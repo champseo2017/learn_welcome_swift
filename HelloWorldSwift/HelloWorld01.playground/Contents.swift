@@ -3,42 +3,26 @@ import UIKit
 
 /*
   
- โอเปอเรเตอร์สำหรับการคำนวณและกำหนดค่า
+ โอเปอเรเตอร์ Ternary
+ let x = 1 > 0 ? true : false // x จะมีค่าเป็น true
+ let s = (n % 2 == 0) ? "Even" : "Odd"
  
- var a = 10
- a += 5 // 15
-
- var b = 20
- b -= 15
+ ไม่จำเป็นต้องคืนค่ากลับมาก็ได้
+ let a = 100
+(a % 2 == 0) ? print("a is even number") : print("a is odd number")
  
- var c = 30
- c *= 2
-
- var d = 40
- d /= 4
- 
- var e = 50
- e %= 7
-
- // ++ -- ถูกยกเลิก
- var a2 = 10
- a += 1 // a = 11 เท่ากับ a++
-
- var b2 = 100
- b -= 1 // b2 = 99 เท่ากับ b--
- 
+ - Ex หาจำนวนที่น้อยที่สุดโดยใช้ Ternary Operator
  
  */
 
- var a = 7
- var b = 11
- let temp = b
- 
- print("a = ", a, ", b = ", b, separator: "")
+ let n1 = 123
+ let n2 = 99
+ let n3 = 108
+ let n4 = 101
+ var min = n1
 
- a += b
- b = a - b
- a -= a
- a = temp
- 
- print("After a = ", a, ", b = ", b, separator: "")
+min = (n2 < min) ? n2 : min
+min = (n3 < min) ? n3 : min
+min = (n4 < min) ? n4 : min
+
+print("จำนวนที่น้อยที่สุด: \(min)")
