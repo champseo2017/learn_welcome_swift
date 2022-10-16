@@ -3,20 +3,42 @@ import UIKit
 
 /*
   
- หารแบบเอาเฉพาะเศษ
- - ตัวตั้งเป็นบวก ไม่ติดลบ ถ้าไม่ลงตัว ลงตัวเท่ากับ 0
- - ตัวตั้งเป็นลบ ติดลบ ถ้าไม่ลงตัว ลงตัวเท่ากับ 0
+ โอเปอเรเตอร์สำหรับการคำนวณและกำหนดค่า
+ 
+ var a = 10
+ a += 5 // 15
+
+ var b = 20
+ b -= 15
+ 
+ var c = 30
+ c *= 2
+
+ var d = 40
+ d /= 4
+ 
+ var e = 50
+ e %= 7
+
+ // ++ -- ถูกยกเลิก
+ var a2 = 10
+ a += 1 // a = 11 เท่ากับ a++
+
+ var b2 = 100
+ b -= 1 // b2 = 99 เท่ากับ b--
  
  
  */
 
-let a = 10 % 3 // a = 1 เพราะ 10 หาร 3 เหลือเศษ 1
-let b = 10 % 2 // b = 0 เพราะ 10 หาร 2 ลงตัว จึงเหลือ 0
-let c = -15 % 4 // c = -3
-let d = -15 % -4 // d = -3
-let e = 15 % -4 // e = 3
-// let f = 10.5 % 3 // Error
-// หารแบบเอาเศษถ้า เป็นทศนิยมใช้ func truncatingRemainder
-let g = 10.5.truncatingRemainder(dividingBy: 3)
-let h = -7.5
-let i = h.truncatingRemainder(dividingBy: 3.5) // i = -0.5
+ var a = 7
+ var b = 11
+ let temp = b
+ 
+ print("a = ", a, ", b = ", b, separator: "")
+
+ a += b
+ b = a - b
+ a -= a
+ a = temp
+ 
+ print("After a = ", a, ", b = ", b, separator: "")
