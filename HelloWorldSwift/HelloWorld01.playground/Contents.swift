@@ -3,47 +3,29 @@ import UIKit
 
 /*
   
- การเชื่อมต่อสตริง
- print("Hello", "World")
-
- print("10 + 20", 10 + 20)
-
- let n = 5
- print("The winner is number", n)
-
- let a = "Sunday"
- let b = "Monday"
-
- print("Today is", a, "and tomorrow is", b)
-
- print("www", "developerthai", "com", separator: ".")
-
- var str: String = "Apple " + "Swift"
-
- let name = "Chris Lattner"
- let s = "Creator of Swift is" + name
-
- let a = "2"
- let b = "1"
- let result = "Arsenal " + a + ":" + b + " Barcelona"
-
- let n2 = 5
- // let str = "The winner is number " + n2 // Error
-
- // let msg = "" + true // Error
+ การแทรกข้อมูลลงในสตริง
+ 
  
  
  */
 
+ let no = 5
+ let str = "The winner is number \(no)"
 
-var str2 = "Model: iPhone XX \n"
+let name = "Mr. John"
+let country = "UK"
+let msg = "Number \(no) is \(name) from \(country)"
+print(msg)
 
-str2 += "OS: IOS 20 \n"
-str2 += "Display: 5.67 inches \n"
+let a = 2
+let b = 1
 
-print(str2)
+print("Arsenal \(a):\(b) Barcelona")
 
-let b = "Battery: 10,000 mAh"
-str2 += b
-print(str2)
+let t: Bool = true
+print("Vision with Action make your dream come \(t)")
 
+let x: Int = 10
+let y: Int = 20
+
+print("\(x) + \(y) = \(x + y)")
