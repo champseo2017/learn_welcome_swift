@@ -3,26 +3,47 @@ import UIKit
 
 /*
   
- โอเปอเรเตอร์ Ternary
- let x = 1 > 0 ? true : false // x จะมีค่าเป็น true
- let s = (n % 2 == 0) ? "Even" : "Odd"
+ การเชื่อมต่อสตริง
+ print("Hello", "World")
+
+ print("10 + 20", 10 + 20)
+
+ let n = 5
+ print("The winner is number", n)
+
+ let a = "Sunday"
+ let b = "Monday"
+
+ print("Today is", a, "and tomorrow is", b)
+
+ print("www", "developerthai", "com", separator: ".")
+
+ var str: String = "Apple " + "Swift"
+
+ let name = "Chris Lattner"
+ let s = "Creator of Swift is" + name
+
+ let a = "2"
+ let b = "1"
+ let result = "Arsenal " + a + ":" + b + " Barcelona"
+
+ let n2 = 5
+ // let str = "The winner is number " + n2 // Error
+
+ // let msg = "" + true // Error
  
- ไม่จำเป็นต้องคืนค่ากลับมาก็ได้
- let a = 100
-(a % 2 == 0) ? print("a is even number") : print("a is odd number")
- 
- - Ex หาจำนวนที่น้อยที่สุดโดยใช้ Ternary Operator
  
  */
 
- let n1 = 123
- let n2 = 99
- let n3 = 108
- let n4 = 101
- var min = n1
 
-min = (n2 < min) ? n2 : min
-min = (n3 < min) ? n3 : min
-min = (n4 < min) ? n4 : min
+var str2 = "Model: iPhone XX \n"
 
-print("จำนวนที่น้อยที่สุด: \(min)")
+str2 += "OS: IOS 20 \n"
+str2 += "Display: 5.67 inches \n"
+
+print(str2)
+
+let b = "Battery: 10,000 mAh"
+str2 += b
+print(str2)
+
