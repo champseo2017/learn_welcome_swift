@@ -3,20 +3,30 @@ import UIKit
 
 /*
   
- การเขียนอักขระพิเศษบางตัวในสตริง
+ การกำหนดบล็อกด้วย {}
+  - ในภาษา Swift ถึงแม้การทำตามเงื่อนไขหรือลูปจะมีเพียงคำสั่งเดียว ก็ต้องเขียนคำสั่ง
+ นั้นไว้ในบล็อกของ ปีกกา {}
  
+ if y == 0 {
+   print("ค่าเป็น 0 ไม่ได้")
+ }
  
- 
+ if (y == 0)
+    print("ค่าเป็น 0 ไม่ได้") // Error
  
  */
 
- var str = "Model: iPhone XX \n"
- str += "Display: 5.67\""
- print(str)
+let x = 0
+if x == 0 {
+    print("zero")
+}
 
+for i in 1...5 {
+    print(i)
+}
 
- let a = 10
- print("a = \(a)")
- print("a = \\(a)")
- print("a = \\\(a)")
- print("one\ttwo\tthree")
+func test() {
+    if (1 == 2) {
+        return
+    }
+}
