@@ -3,20 +3,31 @@ import UIKit
 
 /*
   
- การใช้วงเล็บ
- - ใน swift จะเขียนเงื่อนไขไว้ในวงเล็บ (...) หรือไม่ก็ได้
+ การตรวจสอบเงื่อนไขด้วย if - else
  
  */
 
- let a = 1
-let b = 99
+let withdraw = 25_000
 
-if a == b {
-    print("เท่ากัน") // if (a == b)
-} else if a !== b { // หรือ else if (a !== b)
-    print("ไม่เท่ากัน")
+if withdraw > 20_000 {
+    print("จำนวนเงิน")
 }
 
-for i in 1...10 { // หรือเขียนเป็น for(i in 1...10)
-    print(i)
+if (withdraw % 100) != 0 {
+    print("จำนวนเงินที่จะถอนต้องเป็นจำนวนเต็มร้อย")
+}
+
+var isFirst: Bool = false
+if isFirst == true {
+    isFirst = !isFirst
+}
+
+let isInteger = true
+if isInteger == false { // หรือ if !isInteger {}
+    print("ต้องเป็นจำนวนเต็ม")
+}
+
+let code: String = "abcde"
+if code == "abcde" {
+    print("รหัสถูกต้อง")
 }
