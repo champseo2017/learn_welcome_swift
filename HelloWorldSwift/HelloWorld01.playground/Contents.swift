@@ -3,31 +3,24 @@ import UIKit
 
 /*
   
- การตรวจสอบเงื่อนไขด้วย if - else
+ การหาค่ามากที่สุดจากจำนวนทั้งหมด
  
  */
 
-let withdraw = 25_000
 
-if withdraw > 20_000 {
-    print("จำนวนเงิน")
+ let n1 = 108
+ let n2 = 1009
+ let n3 = 189
+ var max = n1
+
+if n2 > max {
+    max = n2
 }
 
-if (withdraw % 100) != 0 {
-    print("จำนวนเงินที่จะถอนต้องเป็นจำนวนเต็มร้อย")
+if n3 > max {
+    max = n3
 }
 
-var isFirst: Bool = false
-if isFirst == true {
-    isFirst = !isFirst
-}
+print("จำนวนที่มากที่สุดคือ \(max)")
 
-let isInteger = true
-if isInteger == false { // หรือ if !isInteger {}
-    print("ต้องเป็นจำนวนเต็ม")
-}
 
-let code: String = "abcde"
-if code == "abcde" {
-    print("รหัสถูกต้อง")
-}
