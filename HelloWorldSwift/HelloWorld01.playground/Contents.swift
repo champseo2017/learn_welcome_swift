@@ -3,24 +3,29 @@ import UIKit
 
 /*
   
- การหาค่ามากที่สุดจากจำนวนทั้งหมด
+ การเปลียนหน่วยของขนาดไฟล์ให้เหมาะสม
+ 
  
  */
 
+var fileSize: Double = 1_234_567
+var unit: String = ""
+print("ขนาดของไฟล์ (ไบต์) >> \(fileSize)")
 
- let n1 = 108
- let n2 = 1009
- let n3 = 189
- var max = n1
-
-if n2 > max {
-    max = n2
+if fileSize >= 1_099_511_627_776 {
+    fileSize /= 1_099_511_627_776
+    unit = "TB"
+} else if fileSize >= 1_073_741_824 {
+    fileSize /= 1_073_741_824
+    unit = "GB"
+} else if fileSize >= 1_048_576 {
+    fileSize /= 1_048_576
+    unit = "MB"
+} else if fileSize >= 1_024 {
+    fileSize /= 1_024
+    unit = "KB"
+} else {
+    unit = (fileSize > 1) ? "Bytes" : "Byte"
 }
 
-if n3 > max {
-    max = n3
-}
-
-print("จำนวนที่มากที่สุดคือ \(max)")
-
-
+print("ขนาดของไพล์ที่เหมาะสม >> \(fileSize) \(unit)")
