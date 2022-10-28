@@ -3,28 +3,42 @@ import UIKit
 
 /*
   
- การกำหนดช่วงข้อมูลด้วย Range Operator
+ การใช้คำสั่ง if-case
+ - ฟังก์ชัน contains() ตรวจสอบว่าข้อมูลอยู่ในช่วงนั้นหรือไม่
+   - let rage = 1...10
+     let x = ...
+     if range.contains(x) {}
  
-  - One-Sided Range
-    - จะกำหนดเฉพาะค่าแรก หรือ ค่าสุดท้ายของช่วงข้อมูลเพียงอย่างใดอย่างหนึ่ง
+   - การใช้คำสั่ง if-case ร่วมกับ Range Operator
+     - if case ช่วงข้อมูล = ค่าที่ต้องการตรวจสอบ {
+     คำสั่งต่างๆ
+ }
+ 
+   let day = 10
+   if case 1...31 = day {}
+   let month = 12
+   if case 1...12 = month {}
+ 
+  - สามารใช้เครื่องหมายคอมม่า , ต่อท้ายเงื่อนไขอื่นๆ ได้
+   let x = 5
+   let y = ...
+   if case 1...100 = x, y != 0 { // คล้าย &&
+     print(x/y)
+   }
+ 
+   let latitude = ...
+   let longitude = ...
+   if case -90...90 = latitude, case -190...190 = longitude {
+    - 90 ถึง 90  และ -180 - 180 (ค่าละติจุด และ ลองจิจุด)
+ }
  
  */
 
-let range1 = 10... // (10 ขึ้นไป (ไม่น้อยกว่า 10))
-range1.contains(10) // true
-range1.contains(11) // true
-range1.contains(9) // false
 
-let range2 = ...10 // (10 ลงมาไม่เกิน 10)
-range2.contains(10) // true
-range2.contains(11) // false
-range2.contains(-1) // true
+ var balance = 50_000 // ยอดเงินคงเหลือ
+ let withdraw = 2_000 // จำนวนเงินที่จะถอน
 
-let range3 = ..<10 // หมายถึงต่ำกว่า 10
-range3.contains(10) // false
-range3.contains(9) // true
-range3.contains(-1) // true
-
-let range4 = (-1)... // ติดลบใส่วงเล็บ
-let range5 = ...(-1)
-let range6 = ..<(-1)
+if case 100...balance = withdraw, withdraw <= balance, withdraw % 100 == 0, withdraw <= 20_000 {
+    balance -= withdraw
+}
+// if calse ใช้ , ในการต่อเงื่อนไข
