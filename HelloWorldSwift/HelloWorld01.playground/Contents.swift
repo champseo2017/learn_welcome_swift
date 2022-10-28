@@ -3,29 +3,32 @@ import UIKit
 
 /*
   
- การเปลียนหน่วยของขนาดไฟล์ให้เหมาะสม
+ การกำหนดช่วงข้อมูลด้วย Range Operator
+ 
+  - Closed Range Operator
+    - กำหนดค่าแรกและค่าสุดท้ายของช่วงข้อมูลด้วย 3 จุด
+    a...b
+    - ค่าแรกต้องน้อยกว่า ค่าที่สอง
+    - นับรวมค่าแรกและค่าสุดท้ายใน Range Operator ด้วย
+    - 1...10 (1, 2, 3,..., 10)
+    - 50...99 (50 - 59)
+    - 1000...100 Error
+    - -10...(-1) ค่าสุดท้ายติดลบเขียนไว้ในวงเล็บ (ค่าแรกจะใส่วงเล็บหรือไม่ก็ได้)
  
  
  */
 
-var fileSize: Double = 1_234_567
-var unit: String = ""
-print("ขนาดของไฟล์ (ไบต์) >> \(fileSize)")
-
-if fileSize >= 1_099_511_627_776 {
-    fileSize /= 1_099_511_627_776
-    unit = "TB"
-} else if fileSize >= 1_073_741_824 {
-    fileSize /= 1_073_741_824
-    unit = "GB"
-} else if fileSize >= 1_048_576 {
-    fileSize /= 1_048_576
-    unit = "MB"
-} else if fileSize >= 1_024 {
-    fileSize /= 1_024
-    unit = "KB"
+let data = 10...20
+if data.contains(12) {
+    print("12 อยู่ในช่วงที่กำหนด")
 } else {
-    unit = (fileSize > 1) ? "Bytes" : "Byte"
+    print("12 ไม่อยู่ในช่วงที่กำหนด")
 }
+print(data.count) // 11
+print(data.lowerBound) // 10
+print(data.upperBound) // 20
 
-print("ขนาดของไพล์ที่เหมาะสม >> \(fileSize) \(unit)")
+// let min = 100
+// let max = 150
+// let range = min...max
+// if range.contains(120) {}
