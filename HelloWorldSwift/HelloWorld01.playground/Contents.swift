@@ -3,44 +3,32 @@ import UIKit
 
 /*
   
- การวนลูปแบบ for-in
- for สำหรับการทำงานแบบวนรอบหรือลูป (Loop) จากค่าเริ่มต้นจนถึงค่าสุดท้าย
- กำหนดด้วย Range Operator
- 
- for ตัวแปร in ค่าแรก...ค่าสุดท้าย {
-   คำสั่งต่างๆ
- }
+ การกำหนดช่วงข้อมูลของลูป for-in ในแบบอื่นๆ
+ ใช้ stride() ค่าแรกจะน้อยกว่าหรือมากกว่าค่าสุดท้ายก็ได้ ขึ้นอยู่กับว่าต้องการ
+ วนลูปแบบเพิ่มหรือลดค่า by เป็นตัวกำหนดว่าจะเพิ่มหรือลดค่าครั้งล่ะเท่าไรในแต่ละลูป
+ ซึ้งค่าทั้งหมดที่กำหนดไม่จำเป็นต้องเป็นจำนวนเต็ม อาจเป็นทศนิยมก็ได้
  
  */
 
-//for x in 1...10 {
-//    print(x)
+//for a in stride(from: 1, to: 10, by: 2) { // by เพิ่มค่าทีละ 2 ในแต่ล่ะรอบ
+//    print(a, " ", terminator: "") // 1 3 5 7 9
 //}
 
-// Half-Open Range Operator
-//for a in 1..<10 { // 1 - 9
-//    print(a)
+
+//for a in stride(from: 1.5, to: 10.5, by: 1.5) { // by เพิ่มค่าขึ้นทีล่ะ 1.5
+//    print(a, " ", terminator: "") // 1.5 3.0 4.5 ...9.0
 //}
 
-//for x in 10.5...20.5 { // Error เพราะไม่ใช้จำนวนเต็ม
-//    print(x)
+//for a in stride(from: 20, to: 10, by: -2) {
+//    print(a, " ", terminator: "") // 20 18 16 14 12
 //}
 
-for _ in 1...5 {
-    print("Swift")
-}
+// function stride() ไม่นับค่าสุดท้ายคล้าย Half-Open Range Operator
 
-// การหาเลขยกกำลัง
+//for a in (1...10).reversed() {
+//    print(a, " ", terminator: "")
+//}
 
-let base: Int = 6
-let power: Int = 5
-
-if power >= 0 {
-    var result = 1
-    for _ in 0...power {
-        result *= base
-    }
-    print("\(base) ^ \(power) = \(result)")
-} else {
-    print("เลขชี้กำลังต้องมากกว่าหรือเท่ากับศูนย์")
+for b in (-5..<(-1)).reversed() {
+    print(b, " ", terminator: "")
 }
