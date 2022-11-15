@@ -2,44 +2,43 @@ import UIKit
 
 
 /*
+ 
+ การกำหนดค่าดีฟอลต์แบบ nil coalescing
+ - ?? "ค่าดีฟอลต์"
+ 
+ let a: Int? = nil
+ var b: Int
+ b = a ?? 0 // ถ้าค่า a เป็น nil ใช้ค่าดีฟอลต์ 0 แทน
+ print(b)
   
-  การใช้วิธี Forced Unwrapping
-  - ใช้เครื่องหมาย ! ไว้หลังตัวแปรแบบ Optional แต่ต้องแน่ใจว่าตัวแปรนั้นมีค่า
- 
- var x: Double? = nil
- print(x!) // Error เพราะมีค่าเป็น nil
- 
- var a: Int? = 123
- a! += 1
- print(a!)
-
- let b: String? = "Hello"
- print(b!)
-
- let c: Int? = 10
- let d: Int? = 20
- let e: Int? = c! + d!
- print(e!)
-
-
- var str: String? = nil
- str = "Hi"
- print(str!)
- 
- - ไม่ Forced Unwrapping โดยตรง แต่ตรวจสอบด้วย if ก่อนจึงค่อย Forced Unwrapping
- let x: Double? = nil
- if x != nil {
-     print(x!)
- } else {
-     print("Error")
- }
- 
- let str: String? = nil
- if str != nil {
-     print(str!)
- }
- 
+  
  */
 
 
+let a: Int? = nil
+var b: Int
 
+if a == nil { // เทียบเท่ากับ
+    b = 0
+}
+
+
+let c: Double? = 1.23
+let d = c ?? -1
+
+var f: Float? = nil
+f = f ?? 0.0
+
+let x: Int? = 10
+let y: Int? = nil
+let z: Int
+
+z = (x ?? 0) + (y ?? -1)
+print(z)
+
+
+let sum = (Int("123") ?? 0) + (Int("xxx") ?? -1)
+print(sum)
+
+let msg: String? = nil
+print(msg ?? "Error")
