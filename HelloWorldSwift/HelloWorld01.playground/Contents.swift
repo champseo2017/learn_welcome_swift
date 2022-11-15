@@ -3,40 +3,70 @@ import UIKit
 
 /*
   
-  การกำหนด Optional Type
-  
-  var a: Int?
-  var b: Double?
-  let c: String?
-  
-  var a: Int? = 123
-  var b: Double? = 4.56
-  let c: String? = nil
-  
-  a = nil
-  if a == nil {
-    print("a = nil")
+  การใช้วิธี Optional Binding
+  - ใช้คำสั่ง if สร้างค่าคงที่หรือตัวแปรที่เท่ากับตัวแปรแบบ Optional แล้วกำหนดทางเลือก
+ 
+  if <let หรือ var> ตัวแปร = ตัวแปรแบบ Optional {
+   คำสั่ง ในกรณีที่มีค่า
+  } else {
+   คำสั่งต่างๆ กรณีตัวแปรมีค่าเป็น nil
   }
  
-  b = nil
-  if b == nil {
-   print("b = nil")
-  }
+  - ตัวแปรใน if ไม่ใช้การเปรียบเทียบ แต่เป็นการกำหนดค่าให้กับตัวแปร
  
-  (c == nil) ? print("c = nil") : print("c != nil") // c = nil
+ let a: Int? = 10
+ if let x = a {
+     print("a = \(x)")
+ } else {
+     print("a = nil")
+ }
  
-  นำตัวแปรแบบ Optional ไปใช้งานโดยที่ไม่ตรวจสอบก่อนจะเกิด Error ได้
+ let a: Int? = 10
+ if var x = a {
+     print("a = \(x)")
+     x *= 2
+     print("2a = \(x)")
+ } else {
+     print("a = nil")
+ }
  
-  var a: Int?
-  a = 10
-  a += 1 // Error เพราะ a เป็น Optional Type จะใช้งานโดยตรงไม่ได้
+ - การเป็นค่าจากการทำ Optional
+ let a: Int? = 10
+ var a2: Int
+
+ if let x = a {
+     a2 = x
+ } else {
+     a2 = 0
+ }
+
+ print("a2 = \(a2)")
+ a2 += 1
  
+ var v: Int = 0
+ if let temp = Int("123") { // Int() คืนค่าเป็น Optional
+     v = temp
+ }
+ print(v)
  
-  วิธีตรวจสอบเมื่อตัวแปรเป็น Optional Type
-   
-   - Optional Binding การใช้คำสั่ง if ตรวจสอบว่าตัวแปรมีค่าเป็น nil หรือไม่
-   - Force Unwrapping ยกเลิกการตรวจสอบตัวแปรที่เป็น Optional โดยใช้ !
-   - Nil Coalescing กำหนดค่า default เมื่อตัวแปรมีค่าเป็น nil
-   - guard-else คำสั่งที่ป้องกันและหยุดการทำงานของฟังก์ชัน เมื่อมีข้อผิดพลาด
+ - ใช้ตัวแปรแบบ Optional หลายๆ ตัวพร้อมกัน สามารถทำการ Binding ในคำสั่ง if เดียวกันได้
+ โดยใช้ , คอมม่าคั้นการกำหนดตัวแปรด้วยเครื่องหมาย ,
+ 
+ - การทำ Optional Binding ในคำสั่ง if หากตัวแปรมีค่าเป็น nil เทียบเท่ากับเงื่อนไขเป็นเท็จ คำสั่งในบล็อก if จะไม่ถูกดำเนินการ
+ จะพิมพ์คำว่า Error ออกมา
+ 
+ let a: Int? = 10
+ let b: Int? = 20
+ let c: Int? = nil
+
+ if let x = a, let y = b, var z = c {
+     z = x + y
+     print(z)
+ } else {
+     print("Error")
+ }
  
  */
+
+
+
