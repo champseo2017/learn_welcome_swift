@@ -3,39 +3,38 @@ import UIKit
 
 /*
  
- การแปลงข้อมูลชนิดตัวเลข
- - ใน swift ไม่สามารถนำ ข้อมูลที่เป็นตัวเลขแต่ต่างชนิดกันมาคำนวณด้วยการ บวก ลบ คูณ หาร ได้ หรือ กำหนดค่าให้กับตัวแปร อื่นๆ ได้
- Type ต่างกันไม่สามารถทำได้
+ การแปลงข้อมูลระหว่างตัวเลขและสตริง
  
- let a: Int = 123
- let b: Int64 = 456
- let c: Int = a + b // Error
+ let str = "iOS" + 12 // Error
+ let v = 5
+ let str = "Swift version"
+ print(str + String(v)) // Swift version 5
+ print(str + v) // Error
  
- let x: Float = 1.23
- let y: Double = 4.56
- let z: Double = x * y // Error
+ "123" type StringNumber
  
- let d = 123 // Int (Type Inference)
- let e = 4.56 // Double (Type Inference)
- let f = d - e // Error
-
- แก้ด้วยการแปลงชนิดข้อมูล
- - ชนิดข้อมูลเป้าหมาย(ค่าที่ต้องการแปลง)
+ - ข้อมูลที่จะแปลงเป็นตัวเลข คืนค่าเป็นแบบ Non-Optional
+ - ข้อมูลที่จะแปลงเป็น String Number คืนค่าเป็นแบบ Optional
  
- - แปลงจากทศนิยมไปเป็นจำนวนเต็ม จะทำให้ส่วนทศนิยมหายไปเหลือแค่จำนวนเต็ม
- - แปลงจากจำนวนเต็มเป็นทศนิยมจะได้ .0 ต่อท้ายเข้ามา
+ Type(number) -> Type เช่น Int(123) -> Int
+ Type("stringNum") -> Type? เช่น Int("123") -> Int?
+ 
+ 
+ if let x = Float("108"), let y = Float("1009") {
+   var z = x + y
+ } else {
+ }
+ 
  
  */
 
+let a = "10"
+let b = "20"
+let c = "30.50"
+let d: Int? = Int(a) // คืนค่าเป็น Optional ต้องกำหนดตัวแปรที่รับเป็น Optional
+let e: Int? = Int(b)
+let f: Double? = Double(c)
+let g: Int = d! + e! // Binding ตัวแปรแบบ Optional
 
-let a: Int32 = 123
-let b: Int8 = Int8(a) // b = 123
-let c: Int = Int(a) // c = 123
 
-let d: Double = Double(a) // d = 123.0
-let f: Float = 4.56
-let i: Int = Int(f) // i = 4
-
-let x: Int = Int(1.23) + Int(4.56)
-let y: Float = 99.99
-let z: Double = Double(x) + Double(y)
+let h: Double = Double(e!) + f! // h = 50.5
