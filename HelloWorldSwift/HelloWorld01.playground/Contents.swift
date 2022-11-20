@@ -3,49 +3,90 @@ import UIKit
 
 /*
  
- การจัดรูปแบบตัวเลข
- - ใช้คลาส NumberFormatter
- 
- - จัดรูปแบบตัวเลข ใช้เมธอด string(for:) แต่จะได้ค่าเป็นสตริงแบบ Optional
- 
- let numFormat = NumberFormatter()
-numFormat.numberStyle = .decimal
+ ฟังก์ชันพื้นฐานเกี่ยวกับสตริง
+ - การสร้างสตริงแบบกำหนดค่าตัวแปร
+  ประการศตัวแปรแล้วกำหนดค่าสตริงให้กับมัน
+ let a: String = "One"
+ let b = "Two"
+ var c: String
+ c = "Three"
 
-if let str = numFormat.string(for: 12345) {
-    print(str)
+ let d = "\(a), \(b), \(c)"
+ print(d)
+ 
+ - การสร้างสตริงด้วยคำสั่ง String()
+   - เลเบิล repeat และ count สร้างสตริงแบบซ้ำๆ โดยการระบุเลเบิล repeat และ count
+ let a = String("Hello")
+ let b = String(123)
+ let c = String(4.56)
+ let d = String(true)
+ let hello = String(repeating: "Hello", count: 3)
+ let ha = String(repeating: "5", count: 5)
+ 
+ - isEmpty ใช้ในการตรวจสอบว่าเป็นสตริงว่าง ("") หรือไม่ เช่น
+ let a = ""
+ if a.isEmpty {
+     print("a is empty")
+ } else {
+     print("a is not empty")
+ }
+
+ let b = " "
+ b.isEmpty ? print("b is empty") : print("b is not empty")
+  
+ let c = String()
+ c.isEmpty ? print("c is empty") : print("c is not empty")
+
+ let d: String
+ d.isEmpty ? print("d is empty") : print("d is not empty") // Error เพราะไม่ได้กำหนดค่าให้ตัวแปร d
+ 
+ 
+ - append("สตริง") (ไม่คืนค่ากลับมานำไปใช้งานได้เลย)
+   นำสตริงที่ระบุไปต่อท้ายสตริงเดิม
+ var str = "Hello "
+str.append("World")
+print(str)
+ 
+ - appending("สตริง")
+   นำสตริงที่ระบุไปต่อท้ายสตริงเดิม ฟังก์ชันนี้จะคืนค่ากลับมาเป็นสตริงใหม่หลังการเชื่อมต่อ ต้องมีตัวแปรมารับค่า
+ var str = "Hello "
+let newStr = str.appending("Bye")
+print(newStr)
+ 
+ - count นับจำนวนตัวอักษรในสตริง หรือ ความยาวสตริง (ภาษาไทยไม่นับสระ และ วรรณยุกต์)
+ let str = "Apple Swift"
+ print(str.count)
+
+ let swd = "สวัสดี"
+ print(swd.count)
+ 
+ - hasPrefix("สตริง") ตรวจสอบว่าขึ้นต้นด้วยสตริงที่ระบุหรือไม่
+ let a: String = "http://www.dev.com"
+ if a.hasPrefix("http://") {
+     print("H")
+ } else {
+     print("F")
+ }
+ 
+ - hasSuffix("สตริง")
+   ตรวจสอบว่าลงท้ายด้วยสตริงที่ระบุหรือไม่
+ let a: String = "http://www.dev.com"
+ if a.hasSuffix(".com") {
+     print("com")
+ } else {
+     print("Non")
+ }
+ 
+ - contains("สตริง")
+   ตรวจสอบว่ามีสตริงที่ระบุอยู่หรือไม่
+ let word = "no"
+if word.contains("no") {
+    print("yes")
+} else {
+    print("no")
 }
-
-print(numFormat.string(for: 6789)!)
-print(numFormat.string(for: 13579.2468)!)
-
-// กำหนดทศนิยมไม่เกินกี่ตำแหน่ง default คือ 3 ตำแหน่ง
-numFormat.maximumFractionDigits = 2
-print(numFormat.string(for: 13579.2468)!)
-print(numFormat.string(for: 2468.9)!)
-
-// อยากให้ทศนิยมมีอย่างน้อยกี่ตำแหน่ง (ไม่ครบเติม 0 ต่อท้าย)
-numFormat.minimumFractionDigits = 3
-print(numFormat.string(for: 1111.9)!)
- 
- 
- ตัวอย่างการจัดรูปแบบตัวเลขชนิด Double ให้สอดคล้องกับค่าของเลขทศนิยม
- หากทศนิยมมีค่าเป็น .0 แปลงเป็นจำนวนเต็ม แล้วจัดรูปแบบ หากทศนิยมมีค่ามากกว่า
- 0 ก็ให้จัดรูปแบบตามค่าของตัวเลขนั้น
  
  */
+ 
 
 
-var number: Double = 1234.567
-
-let format = NumberFormatter()
-format.numberStyle = .decimal
-
-// หารด้วย 1 ลงตัว (เศษเป็น 0) แสดงว่าทศนิยมเป็น .0 ให้แปลงเป็นจำนวนเต็ม แล้วค่อยนำไปจัดรูปแบบ
-
-if number.truncatingRemainder(dividingBy: 1) == 0 {
-    let n = Int(number)
-    print(format.string(for: n)!)
-} else {
-    format.maximumFractionDigits = 2
-    print(format.string(for: number)!)
-}
