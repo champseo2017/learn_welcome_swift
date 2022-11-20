@@ -3,63 +3,49 @@ import UIKit
 
 /*
  
- คำสั่งทางคณิตศาสตร์และตัวเลข
+ การจัดรูปแบบตัวเลข
+ - ใช้คลาส NumberFormatter
  
- - round(จำนวน)
-   ประมาณค่าโดยหากเศษมีค่าตั้งแต่ 0.5 ขึ้นไป จะปัดเป็นจำนวนเต็มถัดไป แต่หากเศษน้อยกว่า 0.5
-   จะตัดทิ้ง
-   print(round(1.1)) // 1.0
-   print(round(1.5)) // 2.0
-   print(round(1.9)) // 2.0
-   print(round(-1.1)) // -1.0
-   print(round(-1.5)) // -2.0
-   print(round(-1.9)) // -2.0
+ - จัดรูปแบบตัวเลข ใช้เมธอด string(for:) แต่จะได้ค่าเป็นสตริงแบบ Optional
+ 
+ let numFormat = NumberFormatter()
+numFormat.numberStyle = .decimal
+
+if let str = numFormat.string(for: 12345) {
+    print(str)
+}
+
+print(numFormat.string(for: 6789)!)
+print(numFormat.string(for: 13579.2468)!)
+
+// กำหนดทศนิยมไม่เกินกี่ตำแหน่ง default คือ 3 ตำแหน่ง
+numFormat.maximumFractionDigits = 2
+print(numFormat.string(for: 13579.2468)!)
+print(numFormat.string(for: 2468.9)!)
+
+// อยากให้ทศนิยมมีอย่างน้อยกี่ตำแหน่ง (ไม่ครบเติม 0 ต่อท้าย)
+numFormat.minimumFractionDigits = 3
+print(numFormat.string(for: 1111.9)!)
  
  
- - floor(จำนวน)
-   จำนวนเต็มที่อยู่ข้างล่างของจำนวนที่ระบุ
-   print(floor(1.1)) // 1.0
-   print(floor(1.5)) // 1.0
-   print(floor(1.9)) // 1.0
-   print(floor(-1.1)) // -2.0
-   print(floor(-1.5)) // -2.0
-   print(floor(-1.9)) // -2.0
- 
- - ceil(จำนวน)
-   จำนวนเต็มที่อยู่ข้างบนของจำนวนที่ระบุ
-   print(ceil(1.1)) // 2.0
-   print(ceil(1.5)) // 2.0
-   print(ceil(1.9)) // 2.0
-   print(ceil(-1.1)) // -1.0
- print(ceil(-2.1)) // -2.0
- 
- - trunc(จำนวน)
-   ตัดเศษทิ้ง ไม่ว่าจะมีค่าเท่าไหร่ก็ตาม
-   print(trunc(1.1)) // 1.0
- 
- - abs(จำนวน)
-   หาค่า absolute ได้ผลลัพธ์ตามชนิด ของจำนวนที่ระบุ
-   print(abs(10))
- 
- - min(จำนวน1, จำนวน2)
-   หาค่าที่น้อยกว่าของ 2 จำนวน
-   print(min(7, 11))
-   print(min(108, -1009))
- 
- - max(จำนวน1, จำนวน2)
-   หาค่าที่มากกว่าของ 2 จำนวน
-   print(max(7, 11))
-   print(max(108, -1009))
- 
- สร้างเลขสุ่มแบบกำหนดค่าเริ่มต้นเป็นอย่างอื่นที่ไม่ใช้ 0
+ ตัวอย่างการจัดรูปแบบตัวเลขชนิด Double ให้สอดคล้องกับค่าของเลขทศนิยม
+ หากทศนิยมมีค่าเป็น .0 แปลงเป็นจำนวนเต็ม แล้วจัดรูปแบบ หากทศนิยมมีค่ามากกว่า
+ 0 ก็ให้จัดรูปแบบตามค่าของตัวเลขนั้น
  
  */
 
- let a = 3 + arc4random_uniform((10 - 3) + 1) // จะได้เลขสุ่มระหว่าง 3 - 10
- // ผลต่าง 10 - 3 = 7 + 1 จะได้เลขสุ่ม ถึง 7 และ นำ 3 ไปบวก เข้ากับ เลข random จะได้เลขสุ่มที่มีค่าระหว่าง 3 - 10
 
- let b = 10 + arc4random_uniform(11) // เลขสุ่มระหว่าง 10 - 20
-let min: UInt32 = 100
-let max: UInt32 = 999
-let diff = max - min
-let rand100_999 = min + arc4random_uniform(diff + 1)
+var number: Double = 1234.567
+
+let format = NumberFormatter()
+format.numberStyle = .decimal
+
+// หารด้วย 1 ลงตัว (เศษเป็น 0) แสดงว่าทศนิยมเป็น .0 ให้แปลงเป็นจำนวนเต็ม แล้วค่อยนำไปจัดรูปแบบ
+
+if number.truncatingRemainder(dividingBy: 1) == 0 {
+    let n = Int(number)
+    print(format.string(for: n)!)
+} else {
+    format.maximumFractionDigits = 2
+    print(format.string(for: number)!)
+}
