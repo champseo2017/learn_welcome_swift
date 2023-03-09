@@ -1,15 +1,20 @@
 import UIKit
 
 /*
- 
- Dictionary
- key: value
+ Functions
  
  */
+func printInstructors(name: String) {
+    print(name)
+}
 
-let devices: [String: String] = [
-    "phone": "iPhone X",
-    "laptop": "2016 MacBook Pro"
-]
+printInstructors(name: "gg")
 
-devices["laptop"]
+// function signature func add(firstNumber: Int, secondNumber: Int) -> Int
+// to = call site (parameter label - used in scope)
+func add(one firstNumber: Int, to secondNumber: Int, three threeNumber: Int) -> Int {
+    let sum = firstNumber + secondNumber + threeNumber
+    return sum
+}
+
+add(one: 10, to: 20, three: 30)
