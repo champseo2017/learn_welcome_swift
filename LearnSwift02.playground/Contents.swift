@@ -1,27 +1,15 @@
 import UIKit
 
 /*
- Array
- Set
- unordered
- no duplicates
+ 
+ Dictionary
+ key: value
  
  */
 
-var ages = [13, 33, 55, 17, 33]
-//var agesSet: Set<Int> = []
+let devices: [String: String] = [
+    "phone": "iPhone X",
+    "laptop": "2016 MacBook Pro"
+]
 
-var agesSet = Set(ages)
-
-
-agesSet.insert(101)
-agesSet.contains(101) // Check array
-print(agesSet)
-
-/*
- Set
- - unordered
- - no duplicates
- - performance
- 
- */
+devices["laptop"]
