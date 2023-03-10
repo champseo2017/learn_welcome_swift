@@ -1,24 +1,19 @@
 import UIKit
 
 /*
- for loop
+ enum
  
  */
 
-let allStars = ["a", "b", "c"]
-
-//for player in allStars where player == "b" {
-//    print(player)
-//}
-
-//for i in 0..<25 {
-//    print(i)
-//}
-
-var randomInts: [Int] = []
-for _ in 0..<25 {
-    let randomNumber = Int.random(in: 0...1000)
-    randomInts.append(randomNumber)
+enum Phone: String { // Raw value
+  case iPhone11Pro = "a"
+  case iPhoneSE = "b"
+  case pixel = "c"
+  case nokia = "d"
 }
 
-print(randomInts)
+func getSeansOpinion(on phone: Phone) {
+    print(phone.rawValue)
+}
+
+getSeansOpinion(on: .iPhoneSE)
