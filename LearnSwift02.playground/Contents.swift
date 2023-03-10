@@ -1,20 +1,35 @@
 import UIKit
 
 /*
- Functions
+ if this, then that
+ conditional
+ 
+ var isDarkModeOn = false
+if isDarkModeOn {
+    print("That's how it should be.")
+} else {
+    print("You are a psycho.")
+}
+
+var myHighScore = 555
+var yourHighScore = 444
+
+if myHighScore > yourHighScore {
+    print("I win")
+} else {
+    print("You win")
+}
+ 
  
  */
-func printInstructors(name: String) {
-    print(name)
+
+var highScore = 111
+if highScore > 500 {
+    print("You're the best")
+} else if highScore > 250 {
+    print("GG")
+} else if highScore > 100 {
+    print("wp")
+} else {
+    print("HH")
 }
-
-printInstructors(name: "gg")
-
-// function signature func add(firstNumber: Int, secondNumber: Int) -> Int
-// to = call site (parameter label - used in scope)
-func add(one firstNumber: Int, to secondNumber: Int, three threeNumber: Int) -> Int {
-    let sum = firstNumber + secondNumber + threeNumber
-    return sum
-}
-
-add(one: 10, to: 20, three: 30)
