@@ -1,47 +1,29 @@
 import UIKit
 
 /*
- switch
+ Operators
  
  */
 
-enum Phone {
-  case iPhone11Pro
-  case iPhoneSE
-  case pixel
-  case nokia
-}
+//let valueOne = 1000
+//let valueTwo = 1000
+//
+//var isDarkModeOn = true
+//
+//if !isDarkModeOn {
+//    print("It's so bright in here")
+//}
+//let sum = valueOne % valueTwo
 
-func getSeansOpinion(on phone: Phone) {
-    switch phone {
-    case .iPhone11Pro:
-        print("a")
-    case .iPhoneSE:
-        print("se")
-    case .pixel:
-        print("pi")
-    default:
-        print("nokia default")
-    }
-}
+//valueOne == valueTwo
 
-//getSeansOpinion(on: .iPhoneSE)
+//let greeting = "Hello"
+//let name = "Sean"
+//
+//print(greeting + " " + name)
 
-let matchmakingRank = 40
+let agesYoung = [3, 6, 9]
+let agesOld = [99, 67]
 
-func determinePlayerLeague(from rank: Int) {
-    switch rank {
-    case 0:
-        print("a")
-    case 1..<50:
-        print("b")
-    case 50..<100:
-        print("a")
-    case 100..<200:
-        print("You are")
-    default:
-        print("GGeasy")
-    }
-}
-
-determinePlayerLeague(from: 30)
+let allAges = agesYoung + agesOld
+print(allAges)
