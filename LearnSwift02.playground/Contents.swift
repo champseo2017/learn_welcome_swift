@@ -1,29 +1,35 @@
 import UIKit
 
 /*
- Operators
+ Optionals
  
  */
 
-//let valueOne = 1000
-//let valueTwo = 1000
-//
-//var isDarkModeOn = true
-//
-//if !isDarkModeOn {
-//    print("It's so bright in here")
-//}
-//let sum = valueOne % valueTwo
+ var ages: [Int] = [33]
+ ages.sort()
 
-//valueOne == valueTwo
+ // if let
+if let oldestAge = ages.last {
+    print("The oldest age is \(oldestAge)")// string interpolation
+} else {
+    print("Three is no")
+}
 
-//let greeting = "Hello"
-//let name = "Sean"
-//
-//print(greeting + " " + name)
+// nil coalescing
+//let oldestAge = ages.last ?? 999
+//print(oldestAge)
 
-let agesYoung = [3, 6, 9]
-let agesOld = [99, 67]
+// guard statement
+func getOldestAge() {
+    guard let oldestAge = ages.last else {
+        return
+    }
+    print("\(oldestAge) is the oldest age.")
+    // a lot of code
+}
 
-let allAges = agesYoung + agesOld
-print(allAges)
+getOldestAge()
+
+// force unwarp
+let oldestAge = ages.last!
+print(oldestAge)
