@@ -1,35 +1,45 @@
 import UIKit
 
 /*
- Optionals
+Class and Inheritance
  
  */
 
- var ages: [Int] = [33]
- ages.sort()
-
- // if let
-if let oldestAge = ages.last {
-    print("The oldest age is \(oldestAge)")// string interpolation
-} else {
-    print("Three is no")
-}
-
-// nil coalescing
-//let oldestAge = ages.last ?? 999
-//print(oldestAge)
-
-// guard statement
-func getOldestAge() {
-    guard let oldestAge = ages.last else {
-        return
+class Developer {
+    
+    var name: String?
+    var jobTitle: String?
+    var yearsExp: Int?
+    
+    init() {}
+    
+    init(name: String, jobTitle: String, yearsExp: Int) {
+        self.name = name
+        self.jobTitle = jobTitle
+        self.yearsExp = yearsExp
     }
-    print("\(oldestAge) is the oldest age.")
-    // a lot of code
+    
+    func speakName() {
+        print(name!)
+    }
 }
 
-getOldestAge()
 
-// force unwarp
-let oldestAge = ages.last!
-print(oldestAge)
+class iOSDeveloper: Developer {
+    var favoriteFramework: String?
+    
+    func speakFavoriteFramework() {
+        if let favoriteFramework = favoriteFramework {
+            print(favoriteFramework)
+        } else {
+            print("I don't have a fa")
+        }
+    }
+    
+    override func speakName() {
+       print("\(name!) - \(jobTitle!)")
+    }
+}
+
+let sean = iOSDeveloper(name: "Sean", jobTitle: "GG", yearsExp: 9)
+sean.speakName()
