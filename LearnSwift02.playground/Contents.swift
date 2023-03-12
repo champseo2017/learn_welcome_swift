@@ -1,45 +1,40 @@
 import UIKit
 
 /*
-Class and Inheritance
+ Struct = value types
+ 
+ (Class = reference types)
  
  */
 
-class Developer {
-    
-    var name: String?
-    var jobTitle: String?
-    var yearsExp: Int?
-    
-    init() {}
-    
-    init(name: String, jobTitle: String, yearsExp: Int) {
-        self.name = name
-        self.jobTitle = jobTitle
-        self.yearsExp = yearsExp
-    }
-    
-    func speakName() {
-        print(name!)
-    }
+
+// Class = reference types
+//class Developer {
+//    var name: String
+//    var jobTitle: String
+//    var yearsExp: Int
+//
+//    init (name: String, jobTitle: String, yearsExp: Int) {
+//        self.name = name
+//        self.jobTitle = jobTitle
+//        self.yearsExp = yearsExp
+//    }
+//}
+//
+//var sean = Developer(name: "Sean", jobTitle: "iOS Enginneer", yearsExp: 5)
+//var joe = sean
+//
+//joe.name = "Joe"
+//sean.name
+
+// Struct = value types
+struct Developer {
+    var name: String
+    var jobTitle: String
+    var yearsExp: Int
 }
 
-
-class iOSDeveloper: Developer {
-    var favoriteFramework: String?
-    
-    func speakFavoriteFramework() {
-        if let favoriteFramework = favoriteFramework {
-            print(favoriteFramework)
-        } else {
-            print("I don't have a fa")
-        }
-    }
-    
-    override func speakName() {
-       print("\(name!) - \(jobTitle!)")
-    }
-}
-
-let sean = iOSDeveloper(name: "Sean", jobTitle: "GG", yearsExp: 9)
-sean.speakName()
+var sean = Developer(name: "Sean", jobTitle: "iOS Enginneer", yearsExp: 5)
+var joe = sean
+joe.name = "Joe"
+sean.name
