@@ -1,40 +1,15 @@
 import UIKit
 
 /*
- Struct = value types
- 
- (Class = reference types)
+ Extension
  
  */
 
-
-// Class = reference types
-//class Developer {
-//    var name: String
-//    var jobTitle: String
-//    var yearsExp: Int
-//
-//    init (name: String, jobTitle: String, yearsExp: Int) {
-//        self.name = name
-//        self.jobTitle = jobTitle
-//        self.yearsExp = yearsExp
-//    }
-//}
-//
-//var sean = Developer(name: "Sean", jobTitle: "iOS Enginneer", yearsExp: 5)
-//var joe = sean
-//
-//joe.name = "Joe"
-//sean.name
-
-// Struct = value types
-struct Developer {
-    var name: String
-    var jobTitle: String
-    var yearsExp: Int
+extension String {
+    func removeWhiteSpace() -> String {
+        return components(separatedBy: .whitespaces).joined()
+    }
 }
 
-var sean = Developer(name: "Sean", jobTitle: "iOS Enginneer", yearsExp: 5)
-var joe = sean
-joe.name = "Joe"
-sean.name
+let alphabet = "A B C D E F"
+print(alphabet.removeWhiteSpace())
