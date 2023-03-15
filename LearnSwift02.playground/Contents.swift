@@ -1,15 +1,23 @@
 import UIKit
 
 /*
- Extension
+ 
+ Write a function that iterates through number 1-100
  
  */
 
-extension String {
-    func removeWhiteSpace() -> String {
-        return components(separatedBy: .whitespaces).joined()
+func runFizzBuzz() {
+    for i in 1...100 {
+        if i % 3 == 0 && i % 5 == 0 {
+            print("FIZZBUZZ ! \(i)")
+        } else if i % 3 == 0 {
+            print("FIZZ \(i)")
+        } else if i % 5 == 0 {
+            print("BUZZ \(i)")
+        } else {
+            print(i)
+        }
     }
 }
 
-let alphabet = "A B C D E F"
-print(alphabet.removeWhiteSpace())
+runFizzBuzz()
