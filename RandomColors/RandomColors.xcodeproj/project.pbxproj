@@ -7,27 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB1D337729BF763F00162DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D337629BF763F00162DFC /* AppDelegate.swift */; };
-		BB1D337929BF763F00162DFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D337829BF763F00162DFC /* SceneDelegate.swift */; };
-		BB1D337B29BF763F00162DFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D337A29BF763F00162DFC /* ViewController.swift */; };
-		BB1D337E29BF763F00162DFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB1D337C29BF763F00162DFC /* Main.storyboard */; };
-		BB1D338029BF764100162DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB1D337F29BF764100162DFC /* Assets.xcassets */; };
-		BB1D338329BF764100162DFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB1D338129BF764100162DFC /* LaunchScreen.storyboard */; };
+		BB3AA28B29C2154900D69D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3AA28A29C2154900D69D72 /* AppDelegate.swift */; };
+		BB3AA28D29C2154900D69D72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3AA28C29C2154900D69D72 /* SceneDelegate.swift */; };
+		BB3AA29229C2154900D69D72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB3AA29029C2154900D69D72 /* Main.storyboard */; };
+		BB3AA29429C2154B00D69D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB3AA29329C2154B00D69D72 /* Assets.xcassets */; };
+		BB3AA29729C2154B00D69D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB3AA29529C2154B00D69D72 /* LaunchScreen.storyboard */; };
+		BB3AA29F29C216A200D69D72 /* ColorsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3AA29E29C216A200D69D72 /* ColorsTableVC.swift */; };
+		BB3AA2A129C2196D00D69D72 /* ColorsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3AA2A029C2196D00D69D72 /* ColorsDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BB1D337329BF763F00162DFC /* UIKit-Intro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKit-Intro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB1D337629BF763F00162DFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB1D337829BF763F00162DFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BB1D337A29BF763F00162DFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BB1D337D29BF763F00162DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BB1D337F29BF764100162DFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BB1D338229BF764100162DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BB1D338429BF764100162DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB3AA28729C2154900D69D72 /* RandomColors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomColors.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB3AA28A29C2154900D69D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BB3AA28C29C2154900D69D72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BB3AA29129C2154900D69D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BB3AA29329C2154B00D69D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB3AA29629C2154B00D69D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BB3AA29829C2154B00D69D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB3AA29E29C216A200D69D72 /* ColorsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTableVC.swift; sourceTree = "<group>"; };
+		BB3AA2A029C2196D00D69D72 /* ColorsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BB1D337029BF763F00162DFC /* Frameworks */ = {
+		BB3AA28429C2154900D69D72 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +39,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BB1D336A29BF763F00162DFC = {
+		BB3AA27E29C2154900D69D72 = {
 			isa = PBXGroup;
 			children = (
-				BB1D337529BF763F00162DFC /* UIKit-Intro */,
-				BB1D337429BF763F00162DFC /* Products */,
+				BB3AA28929C2154900D69D72 /* RandomColors */,
+				BB3AA28829C2154900D69D72 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BB1D337429BF763F00162DFC /* Products */ = {
+		BB3AA28829C2154900D69D72 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB1D337329BF763F00162DFC /* UIKit-Intro.app */,
+				BB3AA28729C2154900D69D72 /* RandomColors.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BB1D337529BF763F00162DFC /* UIKit-Intro */ = {
+		BB3AA28929C2154900D69D72 /* RandomColors */ = {
 			isa = PBXGroup;
 			children = (
-				BB1D337629BF763F00162DFC /* AppDelegate.swift */,
-				BB1D337829BF763F00162DFC /* SceneDelegate.swift */,
-				BB1D337A29BF763F00162DFC /* ViewController.swift */,
-				BB1D337C29BF763F00162DFC /* Main.storyboard */,
-				BB1D337F29BF764100162DFC /* Assets.xcassets */,
-				BB1D338129BF764100162DFC /* LaunchScreen.storyboard */,
-				BB1D338429BF764100162DFC /* Info.plist */,
+				BB3AA28A29C2154900D69D72 /* AppDelegate.swift */,
+				BB3AA28C29C2154900D69D72 /* SceneDelegate.swift */,
+				BB3AA29E29C216A200D69D72 /* ColorsTableVC.swift */,
+				BB3AA2A029C2196D00D69D72 /* ColorsDetailVC.swift */,
+				BB3AA29029C2154900D69D72 /* Main.storyboard */,
+				BB3AA29329C2154B00D69D72 /* Assets.xcassets */,
+				BB3AA29529C2154B00D69D72 /* LaunchScreen.storyboard */,
+				BB3AA29829C2154B00D69D72 /* Info.plist */,
 			);
-			path = "UIKit-Intro";
+			path = RandomColors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BB1D337229BF763F00162DFC /* UIKit-Intro */ = {
+		BB3AA28629C2154900D69D72 /* RandomColors */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB1D338729BF764100162DFC /* Build configuration list for PBXNativeTarget "UIKit-Intro" */;
+			buildConfigurationList = BB3AA29B29C2154B00D69D72 /* Build configuration list for PBXNativeTarget "RandomColors" */;
 			buildPhases = (
-				BB1D336F29BF763F00162DFC /* Sources */,
-				BB1D337029BF763F00162DFC /* Frameworks */,
-				BB1D337129BF763F00162DFC /* Resources */,
+				BB3AA28329C2154900D69D72 /* Sources */,
+				BB3AA28429C2154900D69D72 /* Frameworks */,
+				BB3AA28529C2154900D69D72 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "UIKit-Intro";
-			productName = "UIKit-Intro";
-			productReference = BB1D337329BF763F00162DFC /* UIKit-Intro.app */;
+			name = RandomColors;
+			productName = RandomColors;
+			productReference = BB3AA28729C2154900D69D72 /* RandomColors.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BB1D336B29BF763F00162DFC /* Project object */ = {
+		BB3AA27F29C2154900D69D72 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					BB1D337229BF763F00162DFC = {
+					BB3AA28629C2154900D69D72 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
 			};
-			buildConfigurationList = BB1D336E29BF763F00162DFC /* Build configuration list for PBXProject "UIKit-Intro" */;
+			buildConfigurationList = BB3AA28229C2154900D69D72 /* Build configuration list for PBXProject "RandomColors" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = BB1D336A29BF763F00162DFC;
-			productRefGroup = BB1D337429BF763F00162DFC /* Products */;
+			mainGroup = BB3AA27E29C2154900D69D72;
+			productRefGroup = BB3AA28829C2154900D69D72 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB1D337229BF763F00162DFC /* UIKit-Intro */,
+				BB3AA28629C2154900D69D72 /* RandomColors */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BB1D337129BF763F00162DFC /* Resources */ = {
+		BB3AA28529C2154900D69D72 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB1D338329BF764100162DFC /* LaunchScreen.storyboard in Resources */,
-				BB1D338029BF764100162DFC /* Assets.xcassets in Resources */,
-				BB1D337E29BF763F00162DFC /* Main.storyboard in Resources */,
+				BB3AA29729C2154B00D69D72 /* LaunchScreen.storyboard in Resources */,
+				BB3AA29429C2154B00D69D72 /* Assets.xcassets in Resources */,
+				BB3AA29229C2154900D69D72 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BB1D336F29BF763F00162DFC /* Sources */ = {
+		BB3AA28329C2154900D69D72 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB1D337B29BF763F00162DFC /* ViewController.swift in Sources */,
-				BB1D337729BF763F00162DFC /* AppDelegate.swift in Sources */,
-				BB1D337929BF763F00162DFC /* SceneDelegate.swift in Sources */,
+				BB3AA29F29C216A200D69D72 /* ColorsTableVC.swift in Sources */,
+				BB3AA2A129C2196D00D69D72 /* ColorsDetailVC.swift in Sources */,
+				BB3AA28B29C2154900D69D72 /* AppDelegate.swift in Sources */,
+				BB3AA28D29C2154900D69D72 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BB1D337C29BF763F00162DFC /* Main.storyboard */ = {
+		BB3AA29029C2154900D69D72 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BB1D337D29BF763F00162DFC /* Base */,
+				BB3AA29129C2154900D69D72 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		BB1D338129BF764100162DFC /* LaunchScreen.storyboard */ = {
+		BB3AA29529C2154B00D69D72 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BB1D338229BF764100162DFC /* Base */,
+				BB3AA29629C2154B00D69D72 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BB1D338529BF764100162DFC /* Debug */ = {
+		BB3AA29929C2154B00D69D72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,7 +230,7 @@
 			};
 			name = Debug;
 		};
-		BB1D338629BF764100162DFC /* Release */ = {
+		BB3AA29A29C2154B00D69D72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,7 +284,7 @@
 			};
 			name = Release;
 		};
-		BB1D338829BF764100162DFC /* Debug */ = {
+		BB3AA29C29C2154B00D69D72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -289,7 +293,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KV425UY23Z;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "UIKit-Intro/Info.plist";
+				INFOPLIST_FILE = RandomColors/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -300,7 +304,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "HelloWorldSwift.UIKit-Intro";
+				PRODUCT_BUNDLE_IDENTIFIER = HelloWorldSwift.RandomColors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -308,7 +312,7 @@
 			};
 			name = Debug;
 		};
-		BB1D338929BF764100162DFC /* Release */ = {
+		BB3AA29D29C2154B00D69D72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -317,7 +321,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KV425UY23Z;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "UIKit-Intro/Info.plist";
+				INFOPLIST_FILE = RandomColors/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,7 +332,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "HelloWorldSwift.UIKit-Intro";
+				PRODUCT_BUNDLE_IDENTIFIER = HelloWorldSwift.RandomColors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -339,25 +343,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BB1D336E29BF763F00162DFC /* Build configuration list for PBXProject "UIKit-Intro" */ = {
+		BB3AA28229C2154900D69D72 /* Build configuration list for PBXProject "RandomColors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB1D338529BF764100162DFC /* Debug */,
-				BB1D338629BF764100162DFC /* Release */,
+				BB3AA29929C2154B00D69D72 /* Debug */,
+				BB3AA29A29C2154B00D69D72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB1D338729BF764100162DFC /* Build configuration list for PBXNativeTarget "UIKit-Intro" */ = {
+		BB3AA29B29C2154B00D69D72 /* Build configuration list for PBXNativeTarget "RandomColors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB1D338829BF764100162DFC /* Debug */,
-				BB1D338929BF764100162DFC /* Release */,
+				BB3AA29C29C2154B00D69D72 /* Debug */,
+				BB3AA29D29C2154B00D69D72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BB1D336B29BF763F00162DFC /* Project object */;
+	rootObject = BB3AA27F29C2154900D69D72 /* Project object */;
 }

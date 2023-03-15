@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  UIKit-Intro
+//  RandomColors
 //
-//  Created by Champ Dev on 13/3/2566 BE.
+//  Created by Champ Dev on 15/3/2566 BE.
 //
 
 import UIKit
