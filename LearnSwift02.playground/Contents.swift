@@ -2,22 +2,12 @@ import UIKit
 
 /*
  
- Write a function that iterates through number 1-100
+ ทำไม Swift ถึงมีตัวแปร?
+ เมื่อคุณสร้างตัวแปรโดยใช้ var คุณสามารถเปลี่ยนแปลงมันได้โดยไม่ต้องใช้ var อีกต่อไป
+ บรรทัดที่ 2 และ 3 ไม่มี var อยู่ในนั้นเพราะฉะนั้นจะแก้ไขค่าที่มีอยู่แทนการสร้างตัวแปรใหม่
  
  */
 
-func runFizzBuzz() {
-    for i in 1...100 {
-        if i % 3 == 0 && i % 5 == 0 {
-            print("FIZZBUZZ ! \(i)")
-        } else if i % 3 == 0 {
-            print("FIZZ \(i)")
-        } else if i % 5 == 0 {
-            print("BUZZ \(i)")
-        } else {
-            print(i)
-        }
-    }
-}
-
-runFizzBuzz()
+ var far = "Hello"
+far = "ggwp"
+far = "wasy"
